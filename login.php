@@ -12,11 +12,18 @@ $stmt->execute();
 $result2=$con->query("SELECT @valor_existe");
 $row=$result2->fetch_assoc();
 if ($row['@valor_existe']==0)
-	echo "<h1 style='text-align: center'>"."Ingreso invalido al sistema"."</h1>";
-			else 
+{
+	echo "<script>alert ('Ingreso invalido al sistema!')</script>";
+    echo "<script>window.location.assign('frm_login.html')</script>";
+}
+	else 
 			{
-				
-			}
+				session_start();
+				$_SESSION['time']=date('H:i:s');
+				$_SESSION['username']=$usuario;
+				$_SESSION['logeado']=true;
+				header("location:welcome.php");
+			};
 
 
 
