@@ -1,6 +1,6 @@
-<?php 
+<?php
 session_start();
-if ($_SESSION['logeado']) 
+if ($_SESSION['logeado'])
 {
 	echo "<h1 style=text-align:center;>¡Bienvenidos!</h1>";
 	echo "</br>";
@@ -8,6 +8,6 @@ if ($_SESSION['logeado'])
 	echo "</br>";
 	echo "Horario de conexion: ". $_SESSION['time'];
 	echo "</br>";
-	echo "<a href='logout.php'>LOGOUT</a>";
+	echo "<a href='insert_productos.html'>LOGOUT</a>";
 }
 ?>
