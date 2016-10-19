@@ -34,12 +34,20 @@
           </div>
           <div class="form-group">
                <label class="control-label col-md-3" >Categorias:</label>
-               <div class="col-md-9">
-                 <select class="form-control col-md-9" name="categoria">
-                    <option value="1">prolongador</option>
-                     <option value="2">puesta a tierra</option>
-                     <option value="3">instrumentos de medicion</option>
-                     <option value="4">productos aislantes</option>
+               <div class="col-md-6">
+                 <select class="form-control col-md-6" name="categoria">
+                  <?php
+                  header('Content-Type: text/html;charset=utf-8');
+                  include_once 'includes/bdd.php';
+                  $con = crearConexion();
+                  $con -> set_charset("utf-8");
+                  $sql = "SELECT id_categoria, descripcion FROM productos order by descripcion";
+                  $result=$con->query($sql);
+                  while ($row = mysqli_fetch_assoc($result)) {
+                    echo '<option value="'.$row['id_categoria'].'">'.$row['descripcion'].'</option>';
+                  }
+
+                   ?>
                   </select>
                   </div>
             </div>

@@ -5,9 +5,28 @@
     <title>Casa homero</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/normalize.css">
+<style media="screen">
+  h3{
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  a{
+    width: 420px;
+    margin: 0 auto;
+  }
+  #caja{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+
+  }
+</style>
   </head>
   <body>
-
+    <script src="js/jquery-3.1.1.js" charset="utf-8"></script>
+    <script src="js/bootstrap.js" charset="utf-8"></script>
   </body>
 </html>
 <?php
@@ -26,7 +45,7 @@
   $con->close();
   echo "<div id='caja'>";
   echo "<h3>¡ Producto almacenado correctamente !</h3>";
-  echo "<a href='new_insert_productos.html' class='btn btn-info'>Ingresar un nuevo producto</a>";
+  echo "<a href='new_insert_productos.php' class='btn btn-info'>Ingresar un nuevo producto</a>";
   echo "<br>";
   echo "<br>";
   echo "<a href='welcome.php' class='btn btn-danger'>Salir</a>";
