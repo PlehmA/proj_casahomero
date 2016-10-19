@@ -41,7 +41,7 @@
                   include_once 'includes/bdd.php';
                   $con = crearConexion();
                   $con -> set_charset("utf-8");
-                  $sql = "SELECT id_categoria, descripcion FROM productos order by descripcion";
+                  $sql = "SELECT id_categoria, descripcion FROM categorias order by descripcion";
                   $result=$con->query($sql);
                   while ($row = mysqli_fetch_assoc($result)) {
                     echo '<option value="'.$row['id_categoria'].'">'.$row['descripcion'].'</option>';
