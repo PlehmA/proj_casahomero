@@ -9,7 +9,7 @@ if ($_SESSION['logeado']) {
     $codEliminar = $_GET['id'];
     $sql = "DELETE FROM productos WHERE id_producto=".$codEliminar;
     $result = $con->query($sql);
-    header("Location:list_productos.php")
+    header("Location:list_productos.php");
   }
 }
  ?>
