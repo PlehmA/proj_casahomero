@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Listar productos</title>
     <link rel="stylesheet" href="css\bootstrap.css">
+    <link rel="stylesheet" href="css\font-awesome.css" media="screen" title="no title">
   </head>
   <body>
     <div class="container">
@@ -41,6 +42,9 @@
             echo "<th>";
             echo "Eliminar";
             echo "</th>";
+            echo "<th>";
+            echo "Actualizar";
+            echo "</th>";
             echo "</tr>";
             echo "</thead>";
             echo " <tbody>";
@@ -53,11 +57,16 @@
               }
               echo "<td>";
              ?>
-             <a href="#" onclick="deleteProducto('<?php echo $row[0]; ?>')">x</a>
+             <a href="#" onclick="deleteProducto('<?php echo $row[0]; ?>')"><button type="button" name="button" class="btn btn-danger">X</button></a>
              <?php
              echo "</td>";
-             echo "</tr>";
-           }
+             echo "<td>";
+            ?>
+            <a href="#" onclick="updateProducto('<?php echo $row[0]; ?>')"><button type="button" name="button" class="btn btn-info"><span><i class="fa fa-refresh" aria-hidden="true"></i></span></button></a>
+            <?php
+            echo "</td>";
+            echo "</tr>";
+          }
               ?>
             </tbody>
           </table>
@@ -76,5 +85,6 @@
     <script src="js\jquery-3.1.1.js" charset="utf-8"></script>
     <script src="js\bootstrap.js" charset="utf-8"></script>
     <script src="js\deleteprod.js"></script>
+    <script src="js\udateproducto.js"></script>
   </body>
 </html>
