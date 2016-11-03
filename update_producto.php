@@ -23,15 +23,16 @@ if ($_SESSION['logeado']) {
     <link rel="stylesheet" href="css\font-awesome.css" media="screen" title="no title">
   </head>
   <body>
+    <div class="container">
     <!-- Form Name -->
     <h1 class="jumbotron text-center">Actualizar productos</h1>
-    <form class="form-horizontal" action="save_producto_all.php" method="POST">
+    <form class="form-horizontal" action="save_producto_all.php" method="POST" accept-charset="utf-8">
 <fieldset>
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="descripcion"></label>
   <div class="col-md-5">
-  <input id="descripcion" name="descripcion" type="text" placeholder="Descripcion" class="form-control input-md">
+  <input id="descripcion" name="descripcion" type="text" placeholder="Descripcion" class="form-control input-md" value="<?php echo $row[2]; ?>">
 
   </div>
 </div>
@@ -40,7 +41,7 @@ if ($_SESSION['logeado']) {
 <div class="form-group">
   <label class="col-md-4 control-label" for="precio"></label>
   <div class="col-md-5">
-  <input id="precio" name="precio" type="text" placeholder="Precio" class="form-control input-md">
+  <input id="precio" name="precio" type="text" placeholder="Precio" class="form-control input-md" value="<?php echo $row[4]; ?>">
 
   </div>
 </div>
@@ -49,7 +50,7 @@ if ($_SESSION['logeado']) {
 <div class="form-group">
   <label class="col-md-4 control-label" for="cantidad"></label>
   <div class="col-md-5">
-  <input id="cantidad" name="cantidad" type="text" placeholder="Cantidad" class="form-control input-md">
+  <input id="cantidad" name="cantidad" type="text" placeholder="Cantidad" class="form-control input-md" value="<?php echo $row[3]; ?>">
 
   </div>
 </div>
@@ -74,6 +75,17 @@ if ($_SESSION['logeado']) {
 
 </fieldset>
 </form>
+</div>
+<div class="container">
+  <div class="row">
+    <hr>
+    <div class="col-md-12">
+      <p class="text-center">
+        &copy 2016 CASA HOMERO todos los derechos reservados
+      </p>
+    </div>
+  </div>
+</div>
 <script src="js\jquery-3.1.1.js" charset="utf-8"></script>
 <script src="js\bootstrap.js" charset="utf-8"></script>
   </body>
