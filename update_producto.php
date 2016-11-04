@@ -25,7 +25,7 @@ if ($_SESSION['logeado']) {
   <body>
     <div class="container-fluid">
       <nav>
-        <a href="frm_login.html"><button type="button" name="button" class="btn btn-default" style="background-color: #ff69b4;">Login</button></a>
+        <a href="frm_login.html"><button type="button" name="button" class="btn btn-default" style="background-color: #ff69b4; box-shadow: 2px 2px 5px #999;">Login</button></a>
       </nav>
     </div>
     <div class="container">
@@ -65,7 +65,17 @@ if ($_SESSION['logeado']) {
   <label class="col-md-4 control-label" for="categoria"></label>
   <div class="col-md-5">
     <select id="categoria" name="categoria" class="form-control">
-      <option value="<php $row=[2] ?>"></option>
+    <?php
+    header('Content-Type: text/html;charset=utf-8');
+    include_once 'includes/bdd.php';
+    $con = crearConexion();
+    $con -> set_charset("utf-8");
+    $sql = "SELECT id_categoria, descripcion FROM categorias order by descripcion";
+    $result=$con->query($sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+      echo '<option value="'.$row['id_categoria'].'">'.$row['descripcion'].'</option>';
+    }
+     ?>
     </select>
   </div>
 </div>

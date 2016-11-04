@@ -7,11 +7,19 @@ if ($_SESSION['logeado'])
 	echo "¿Como andas " .$_SESSION['username']."?";
 	echo "</br>";
 	echo "Horario de conexion: ". $_SESSION['time'];
-	echo "</br>";
-	echo "<hr>";
-	echo "<a href='insert_productos.html'>LOGOUT</a>";
-	echo "</br>";
-	echo "<hr>";
-	echo "<a href='list_productos.php'>Lista productos</a>";
 }
 ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<hr>
+		<a href='insert_productos.html'>LOGOUT</a>
+		<br>
+		<hr>
+		<a href='list_productos.php'>Lista productos</a>
+	</body>
+</html>
