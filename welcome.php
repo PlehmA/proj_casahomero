@@ -8,6 +8,10 @@ if ($_SESSION['logeado'])
 	echo "</br>";
 	echo "Horario de conexion: ". $_SESSION['time'];
 	echo "</br>";
+	echo "<hr>";
 	echo "<a href='insert_productos.html'>LOGOUT</a>";
+	echo "</br>";
+	echo "<hr>";
+	echo "<a href='list_productos.php'>Lista productos</a>";
 }
 ?>

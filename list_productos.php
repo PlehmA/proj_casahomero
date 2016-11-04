@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="css\font-awesome.css" media="screen" title="no title">
   </head>
   <body>
+    <header>
+      <div class="container-fluid">
+        <nav>
+          <a href="frm_login.html"><button type="button" name="button" class="btn btn-default" style="background-color: #ff69b4;">Login</button></a>
+        </nav>
+      </div>
+
+    </header>
     <div class="container">
       <div class="jumbotron text-center">
         <h2>LISTAR PRODUCTOS</h2>

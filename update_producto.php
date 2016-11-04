@@ -23,6 +23,11 @@ if ($_SESSION['logeado']) {
     <link rel="stylesheet" href="css\font-awesome.css" media="screen" title="no title">
   </head>
   <body>
+    <div class="container-fluid">
+      <nav>
+        <a href="frm_login.html"><button type="button" name="button" class="btn btn-default" style="background-color: #ff69b4;">Login</button></a>
+      </nav>
+    </div>
     <div class="container">
     <!-- Form Name -->
     <h1 class="jumbotron text-center">Actualizar productos</h1>
