@@ -35,7 +35,7 @@ if ($_SESSION['logeado']) {
 <fieldset>
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="descripcion"></label>
+  <label class="col-md-4 control-label" for="descripcion">Descripcion</label>
   <div class="col-md-5">
   <input id="descripcion" name="descripcion" type="text" placeholder="Descripcion" class="form-control input-md" value="<?php echo $row[2]; ?>">
 
@@ -44,7 +44,7 @@ if ($_SESSION['logeado']) {
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="precio"></label>
+  <label class="col-md-4 control-label" for="precio">Precio: </label>
   <div class="col-md-5">
   <input id="precio" name="precio" type="text" placeholder="Precio" class="form-control input-md" value="<?php echo $row[4]; ?>">
 
@@ -53,7 +53,7 @@ if ($_SESSION['logeado']) {
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="cantidad"></label>
+  <label class="col-md-4 control-label" for="cantidad">Cantidad: </label>
   <div class="col-md-5">
   <input id="cantidad" name="cantidad" type="text" placeholder="Cantidad" class="form-control input-md" value="<?php echo $row[3]; ?>">
 
@@ -62,7 +62,7 @@ if ($_SESSION['logeado']) {
 
 <!-- Select Basic -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="categoria"></label>
+  <label class="col-md-4 control-label" for="categoria">Categoria: </label>
   <div class="col-md-5">
     <select id="categoria" name="categoria" class="form-control">
     <?php
@@ -72,14 +72,17 @@ if ($_SESSION['logeado']) {
     $con -> set_charset("utf-8");
     $sql = "SELECT id_categoria, descripcion FROM categorias order by descripcion";
     $result=$con->query($sql);
-    while ($row = mysqli_fetch_assoc($result)) {
-      echo '<option value="'.$row['id_categoria'].'">'.$row['descripcion'].'</option>';
+    while ($row2 = mysqli_fetch_assoc($result)) {
+      echo '<option value="'.$row2['id_categoria'].'">'.$row2['descripcion'].'</option>';
     }
      ?>
     </select>
   </div>
 </div>
-
+<!--Show id-->
+<div class="form-group">
+  <input type="hidden" name="idpro" value="<?php echo $row[0]; ?>">
+</div>
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="guardar"></label>

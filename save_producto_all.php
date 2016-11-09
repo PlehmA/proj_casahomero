@@ -6,6 +6,7 @@ if ($_SESSION['logeado']) {
   $con = crearConexion();
   $con -> set_charset("utf-8");
   if (isset($_POST['guardar'])) {
+
     $idProducto = $_POST['idpro'];
     $idCategoria = $_POST['categoria'];
     $precioPro = $_POST['precio'];
