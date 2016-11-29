@@ -1,0 +1,102 @@
+/*comentario --style.css--*/
+header {
+	text-align: center;
+	background-color: #9dc4c6;
+	padding: 5px 15px 0 15px;
+	height: 90px; /* altura???? */
+	color: #fff; /*color de la fuente  */
+}
+
+#wrapper {
+	margin: 0px auto;
+	border: 1px solid #c3c3c3;
+	width: 860px;
+	padding: 40px;
+	width: 860px;
+} /*  fecha de modificacion 21-4*/
+body {
+	font-family: verdana, arial, sans-serif;
+}
+
+h1 {
+	margin: 10px;
+	text-align: center;
+	margin-top:10px;
+	
+}
+
+nav {
+	float: left;
+	background-color: #689b9e;
+	width: 160px;
+	height: 400px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin-left: -33px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	line-height: 1.8em;
+}
+
+nav ul li a:hover {
+	/*text-decoration: underline;  */
+	color: #33332e;
+}
+
+#principal {
+	background-color: #e4fde1;
+	float: left;
+	width: 680px;
+	padding: 0 10px 0 10px;
+	height: 400px;
+}
+
+footer {
+	clear: left;
+	width: 850px;
+	background-color: #497a7a;
+	height: 50px;
+	padding: 5px 0 0 10px;
+	text-align: center;
+}
+
+#destacado {
+	font-weight: bold
+}
+
+footer p {
+	font-size: 12px;
+	line-height: 0.8em;
+	color: #fff;
+}
+
+.centrar {
+	display: block;
+	text-align: center;
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+	/*margin-top: 50px;*/
+}
+
+td, th {
+	border: 3px solid #ccc;
+}
+
+.descripcion-col {
+	color: #E1FF42;
+	background-color: #E8A90C;
+}
+#slideWrap {
+	margin:0px auto;
+	width:320px;
+	height: 172px;
+	
+}

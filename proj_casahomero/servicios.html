@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>SERVICIOS | CASA HOMERO</title>
+<link href="css/style.css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>CASA HOMERO</h1>
+			<h3>Materiales Electricos S.R.L.</h3>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="index.html">HOME</a></li>
+				<li><a href="catalogo.php">CATALOGO</a>
+				<li><a href="servicios.html">SERVICIOS</a></li>
+				<li><a href="contacto.html">CONTACTO</a></li>
+				<li><a href="frm_login.html">INGRESO</a></li>
+			</ul>
+		</nav>
+		<section id="principal">
+			<h1>Servicios que ofrecemos</h1>
+			<!--<p>Somos una empresa que crece y evoluciona al ritmo de las
+				exigencias de hoy, buscamos satisfacer a nuestro mercado,
+				ofreciendo, no solo calidad en el producto, sino también todo el
+				compromiso de nuestro personal, para llegar a nuestros clientes y
+				así tratar de satisfacerlo.</p>
+				 table>tbody>(tr>td*2)*4 -->
+			<table id="tblservicios">
+				<tbody>
+					<script>
+					
+					$(document).ready(function(){
+					$.getJSON("servicios.json",function(datos){
+						for (var i in datos.prestaciones){
+						var rowhtml="<tr><td>"+datos.prestaciones[i].nombre+"</td><td>"+datos.prestaciones[i].descripcion+"</td></tr>";
+						$("#tblservicios").append(rowhtml);
+						}
+						});
+						});	
+					</script>
+				</tbody>
+			</table>
+		</section>
+		<footer>
+			&copy 2016 | Casa Homero.com | <span id=destacado>Todos los
+				derechos reservados </span>
+		</footer>
+	</div>
+	<!-- fin wrapper -->
+</body>
+</html>
